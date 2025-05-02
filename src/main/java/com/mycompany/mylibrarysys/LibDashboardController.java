@@ -749,7 +749,6 @@ public class LibDashboardController implements Initializable {
             memSurnameTxt.setText(user.getLastname());
             memEmailTxt.setText(user.getEmailAddress());
             memCntctNumTxt.setText(user.getContactNumber());
-            //memUsernameTxt.setText(user.getUsername());
             usernames = user.getUsername();
             System.out.println("Selected username:" + usernames);
             memUsernameTxt.setText(usernames);
