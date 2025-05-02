@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mylibrarysys.LibDashboardController">
+   <children>
+      <BorderPane fx:id="addBookForm" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane fx:id="addBookMenuAnchor" prefHeight="600.0" prefWidth="276.0" styleClass="nav-form" stylesheets="@dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="82.0" layoutY="124.0" text="Welcome," textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLblAdd" layoutX="82.0" layoutY="153.0" text="Librarian" textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Line endX="231.5" endY="256.5" layoutX="-3.0" layoutY="-51.0" startX="42.29289245605469" startY="256.5" stroke="#f8efd6" />
+                  <Button fx:id="btnProfileAdd" layoutX="54.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Profile" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMembersAdd" layoutX="53.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Members" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBooksAdd" layoutX="53.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Books" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrowAdd" layoutX="53.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Borrow Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturnAdd" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Return Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSignoutAdd" layoutX="65.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="22.0" prefWidth="138.0" styleClass="logout-btn" stylesheets="@dashboard.css" text="SIGN OUT" />
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="addingBookAnchr" layoutX="5.0" layoutY="14.0" prefHeight="572.0" prefWidth="256.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <Label layoutX="6.0" layoutY="115.0" text="Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titleAddTxt" layoutX="6.0" layoutY="133.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="isbnAddTxt" layoutX="7.0" layoutY="235.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="authorAddTxt" layoutX="6.0" layoutY="184.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="6.0" layoutY="166.0" text="Author:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="214.0" text="ISBN:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="genreAddCombx" layoutX="10.0" layoutY="291.0" prefHeight="23.0" prefWidth="224.0" />
+                        <Label layoutX="12.0" layoutY="273.0" text="Genre:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnNewAdd" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" onAction="#clickNew" prefHeight="32.0" prefWidth="108.0" styleClass="btn-books" stylesheets="@styles.css" text="New" />
+                        <Button fx:id="btnDeleteAdd" layoutX="130.0" layoutY="461.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="35.0" prefWidth="109.0" styleClass="btn-books" stylesheets="@styles.css" text="Delete" />
+                        <Button fx:id="btnSaveAdd" layoutX="130.0" layoutY="420.0" mnemonicParsing="false" onAction="#addBook" prefHeight="35.0" prefWidth="109.0" styleClass="btn-books" stylesheets="@styles.css" text="Save" />
+                        <Button fx:id="btnUpdateAdd" layoutX="11.0" layoutY="461.0" mnemonicParsing="false" onAction="#updateBook" prefHeight="35.0" prefWidth="111.0" styleClass="btn-books" stylesheets="@styles.css" text="Update" />
+                        <Label layoutX="39.0" layoutY="37.0" prefHeight="34.0" prefWidth="162.0" text="ADD BOOK" textFill="#432807">
+                           <font>
+                              <Font name="Tahoma Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="bookCountTxt" layoutX="11.0" layoutY="333.0" prefHeight="27.0" prefWidth="195.0" promptText="Required">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnBookCount" layoutX="208.0" layoutY="334.0" mnemonicParsing="false" onAction="#bookCount" prefHeight="25.0" prefWidth="28.0" text="+" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="567.0" prefWidth="831.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <TableView fx:id="addBookTableV" layoutX="36.0" layoutY="61.0" onMouseClicked="#mouseClickedAdd" prefHeight="500.0" prefWidth="754.0" styleClass="books-table-view" stylesheets="@styles.css">
+                           <columns>
+                              <TableColumn fx:id="idClmAdd" minWidth="0.0" prefWidth="0.0" text="Book ID" />
+                              <TableColumn fx:id="titleClmAdd" prefWidth="150.0" text="Title" />
+                              <TableColumn fx:id="authorClmAdd" prefWidth="120.0" text="Author" />
+                              <TableColumn fx:id="isbnClmAdd" prefWidth="120.0" text="ISBN" />
+                              <TableColumn fx:id="genreClmAdd" prefWidth="120.0" text="Genre" />
+                              <TableColumn fx:id="statusClmAdd" prefWidth="121.0" text="Status" />
+                              <TableColumn fx:id="copiesClmAdd" prefWidth="121.0" text="Copies" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="addBookSearch" layoutX="102.0" layoutY="23.0" prefHeight="25.0" prefWidth="561.0" visible="true" />
+                        <Label layoutX="53.0" layoutY="27.0" text="Search:" />
+                        
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="addMemberForm" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="600.0" prefWidth="265.0">
+                     <children>
+                        <AnchorPane layoutX="-16.0" layoutY="14.0" prefHeight="572.0" prefWidth="256.0" styleClass="border-form" stylesheets="@styles.css">
+                           <children>
+                              <Label layoutX="12.0" layoutY="76.0" text="Name:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="memNameTxt" layoutX="12.0" layoutY="94.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="memEmailTxt" layoutX="13.0" layoutY="196.0" prefHeight="25.0" prefWidth="227.0" promptText="Optional">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="memSurnameTxt" layoutX="12.0" layoutY="145.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="12.0" layoutY="127.0" text="Surname:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="175.0" text="Email Address:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="234.0" text="Contact Number:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnMemNew" layoutX="19.0" layoutY="426.0" mnemonicParsing="false" onAction="#clickNew" prefHeight="32.0" prefWidth="108.0" styleClass="btn-books" stylesheets="@styles.css" text="New">
+                                 <font>
+                                    <Font name="Tahoma" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnMemDlt" layoutX="130.0" layoutY="465.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="33.0" prefWidth="109.0" styleClass="btn-books" stylesheets="@styles.css" text="Delete" />
+                              <Button fx:id="btnMemSave" layoutX="130.0" layoutY="425.0" mnemonicParsing="false" onAction="#memberReg" prefHeight="35.0" prefWidth="109.0" styleClass="btn-books" stylesheets="@styles.css" text="Save">
+                                 <font>
+                                    <Font name="Tahoma" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnMemUpdate" layoutX="18.0" layoutY="464.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="35.0" prefWidth="111.0" styleClass="btn-books" stylesheets="@styles.css" text="Update" />
+                              <TextField fx:id="memCntctNumTxt" layoutX="15.0" layoutY="252.0" prefHeight="25.0" prefWidth="227.0" promptText="Required">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="21.0" layoutY="292.0" text="Username:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="memUsernameTxt" layoutX="15.0" layoutY="310.0" prefHeight="28.0" prefWidth="227.0" />
+                              <Label layoutX="28.0" layoutY="36.0" prefHeight="30.0" prefWidth="194.0" text="ADD MEMBER" textFill="#432807">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="16.0" layoutY="355.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="33.0" prefWidth="226.0" styleClass="create-btn-two" stylesheets="@dashboard.css" text="Change Password">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="600.0" prefWidth="265.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="571.0" prefWidth="788.0" styleClass="border-form" stylesheets="@styles.css">
+                           <children>
+                              <TableView fx:id="userTablelV" layoutX="74.0" layoutY="60.0" onMouseClicked="#mouseClickedMem" prefHeight="497.0" prefWidth="627.0" styleClass="books-table-view" stylesheets="@styles.css">
+                                 <columns>
+                                    <TableColumn fx:id="memberIdClm" minWidth="0.0" prefWidth="0.0" text="Member ID" />
+                                    <TableColumn fx:id="memNameClm" prefWidth="150.0" text="Name" />
+                                    <TableColumn fx:id="memSurnameClm" prefWidth="120.0" text="Surname" />
+                                    <TableColumn fx:id="memEmailClm" prefWidth="120.0" text="Email Address" />
+                                    <TableColumn fx:id="memNumberClm" prefWidth="120.0" text="Contact Number" />
+                                    <TableColumn fx:id="memUsernameClm" prefWidth="121.0" text="Username" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="memberSearch" layoutX="132.0" layoutY="23.0" prefHeight="25.0" prefWidth="561.0" />
+                              <Label layoutX="74.0" layoutY="27.0" text="Search:" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <AnchorPane fx:id="memberMenuAnchor" prefHeight="600.0" prefWidth="276.0" styleClass="nav-form" stylesheets="@dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="82.0" layoutY="124.0" text="Welcome," textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLblMem" layoutX="82.0" layoutY="153.0" text="Librarian" textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Line endX="231.5" endY="256.5" layoutX="-3.0" layoutY="-51.0" startX="42.29289245605469" startY="256.5" stroke="#f8efd6" />
+                  <Button fx:id="btnProfileMem" layoutX="54.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Profile" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMembersMem" layoutX="53.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Members" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBooksMem" layoutX="53.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Books" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrowMem" layoutX="53.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Borrow Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturnMem" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Return Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSignoutMem" layoutX="65.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="22.0" prefWidth="138.0" styleClass="logout-btn" stylesheets="@dashboard.css" text="SIGN OUT" />
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+      <BorderPane fx:id="borrowBookForm" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane fx:id="borrowMenuAnchor" prefHeight="600.0" prefWidth="276.0" styleClass="nav-form" stylesheets="@dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="82.0" layoutY="124.0" text="Welcome," textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLblBrw" layoutX="82.0" layoutY="153.0" text="Librarian" textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Line endX="231.5" endY="256.5" layoutX="-3.0" layoutY="-51.0" startX="42.29289245605469" startY="256.5" stroke="#f8efd6" />
+                  <Button fx:id="btnProfileBrw" layoutX="54.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Profile" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMembersBrw" layoutX="53.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Members" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBooksBrw" layoutX="53.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Books" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrowBrw" layoutX="53.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Borrow Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturnBrw" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Return Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSignoutBrw" layoutX="65.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="22.0" prefWidth="138.0" styleClass="logout-btn" stylesheets="@dashboard.css" text="SIGN OUT" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="570.0" prefWidth="803.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <TableView fx:id="tableViewBrw" layoutX="36.0" layoutY="65.0" onMouseClicked="#mouseClickedBorrow" prefHeight="480.0" prefWidth="731.0" styleClass="books-table-view" stylesheets="@styles.css">
+                           <columns>
+                              <TableColumn fx:id="idClmBrw" minWidth="0.0" prefWidth="0.0" text="Book ID" />
+                              <TableColumn fx:id="titleClmBrw" prefWidth="180.0" text="Title" />
+                              <TableColumn fx:id="authorClmBrw" prefWidth="151.0" text="Author" />
+                              <TableColumn fx:id="isbnClmBrw" prefWidth="129.0" text="ISBN" />
+                              <TableColumn fx:id="genreClmBrw" prefWidth="141.0" text="Genre" />
+                              <TableColumn fx:id="statusClmBrw" prefWidth="127.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="borrowSearch" layoutX="113.0" layoutY="23.0" prefHeight="25.0" prefWidth="561.0" />
+                        <Label layoutX="60.0" layoutY="27.0" text="Search:" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="borrowBookAnchr" layoutX="5.0" layoutY="14.0" prefHeight="572.0" prefWidth="256.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="51.0" text="Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="102.0" text="Author:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="150.0" text="ISBN:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="209.0" text="Genre:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="262.0" text="Status:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnBorrow" layoutX="11.0" layoutY="437.0" mnemonicParsing="false" onAction="#borrowBook" prefHeight="35.0" prefWidth="111.0" styleClass="btn-books" stylesheets="@styles.css" text="Borrow" />
+                        <Label fx:id="titleLblBrw" layoutX="14.0" layoutY="69.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="genreLblBrw" layoutX="20.0" layoutY="227.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="authorLblBrw" layoutX="14.0" layoutY="120.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="statusLblBrw" layoutX="20.0" layoutY="280.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="isbnLblBrw" layoutX="20.0" layoutY="175.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label layoutX="20.0" layoutY="313.0" prefHeight="18.0" prefWidth="120.0" text="Available Copies:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="copiesLblBrw" layoutX="20.0" layoutY="331.0" prefHeight="27.0" prefWidth="221.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right></BorderPane>
+      <BorderPane fx:id="returnBookForm" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane fx:id="returnMenuAnchor" prefHeight="600.0" prefWidth="276.0" styleClass="nav-form" stylesheets="@dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="82.0" layoutY="124.0" text="Welcome," textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLblRtn" layoutX="82.0" layoutY="153.0" text="Librarian" textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Line endX="231.5" endY="256.5" layoutX="-3.0" layoutY="-51.0" startX="42.29289245605469" startY="256.5" stroke="#f8efd6" />
+                  <Button fx:id="btnProfileRtn" layoutX="54.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Profile" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMembersRtn" layoutX="53.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Members" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBooksRtn" layoutX="53.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Books" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrowRtn" layoutX="53.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Borrow Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturnRtn" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Return Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSignoutRtn" layoutX="65.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="22.0" prefWidth="138.0" styleClass="logout-btn" stylesheets="@dashboard.css" text="SIGN OUT" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="570.0" prefWidth="801.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <TableView fx:id="tableViewRtn" layoutX="42.0" layoutY="62.0" prefHeight="491.0" prefWidth="708.0" styleClass="books-table-view" stylesheets="@styles.css">
+                           <columns>
+                              <TableColumn fx:id="bookIdClmRtn" minWidth="0.0" prefWidth="0.0" text="Book ID" />
+                              <TableColumn fx:id="titleClmRtn" prefWidth="172.0" text="Title" />
+                              <TableColumn fx:id="issueDateClmRtn" prefWidth="139.0" text="Issue Date" />
+                              <TableColumn fx:id="returnDateClmRtn" prefWidth="129.0" text="Return Date" />
+                              <TableColumn fx:id="returnedDateClmRtn" prefWidth="140.0" text="Returned Date" />
+                              <TableColumn fx:id="feesClmRtn" prefWidth="128.0" text="Fee" />
+                              <TableColumn fx:id="daysOverdueClmRtn" prefWidth="44.0" text="Days Overdue" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="returnSearch" layoutX="60.0" layoutY="23.0" prefHeight="25.0" prefWidth="561.0" />
+                        <Label layoutX="18.0" layoutY="27.0" text="Search:" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="returnBookAnchr" layoutX="-26.0" layoutY="14.0" prefHeight="572.0" prefWidth="256.0" styleClass="border-form" stylesheets="@styles.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="51.0" text="Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="102.0" text="Author:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="150.0" text="ISBN:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="209.0" text="Genre:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="262.0" text="Status:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnReturn" layoutX="11.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleReturnBook" prefHeight="35.0" prefWidth="111.0" styleClass="btn-books" stylesheets="@styles.css" text="Return" />
+                        <Label fx:id="titleLblRtn" layoutX="14.0" layoutY="69.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="genreLblRtn" layoutX="20.0" layoutY="227.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="authorLblRtn" layoutX="14.0" layoutY="120.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="statusLblRtn" layoutX="20.0" layoutY="280.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label fx:id="isbnLblRtn" layoutX="20.0" layoutY="175.0" prefHeight="27.0" prefWidth="221.0" />
+                        <Label layoutX="20.0" layoutY="313.0" prefHeight="18.0" prefWidth="120.0" text="Available Copies:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="copiesLblRtn" layoutX="20.0" layoutY="331.0" prefHeight="27.0" prefWidth="221.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="profileForm" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane fx:id="profileMenuAnchor" prefHeight="600.0" prefWidth="276.0" styleClass="nav-form" stylesheets="@dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="82.0" layoutY="124.0" text="Welcome," textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLblProf" layoutX="82.0" layoutY="153.0" text="Librarian" textFill="#f8efd6">
+                     <font>
+                        <Font name="Tahoma Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Line endX="231.5" endY="256.5" layoutX="-3.0" layoutY="-51.0" startX="42.29289245605469" startY="256.5" stroke="#f8efd6" />
+                  <Button fx:id="btnProfileProf" layoutX="54.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Profile" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMembersProf" layoutX="53.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Members" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBooksProf" layoutX="53.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Manage Books" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrowProf" layoutX="53.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Borrow Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturnProf" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="21.0" prefWidth="161.0" styleClass="create-btn" stylesheets="@styles.css" text="Return Book" textFill="#d7c48c">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSignoutProf" layoutX="65.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="22.0" prefWidth="138.0" styleClass="logout-btn" stylesheets="@dashboard.css" text="SIGN OUT" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="nameTxtProf" layoutX="53.0" layoutY="171.0" prefHeight="31.0" prefWidth="332.0" />
+                  <TextField fx:id="emailTxtProf" layoutX="53.0" layoutY="236.0" prefHeight="31.0" prefWidth="489.0" />
+                  <TextField fx:id="surnameTxtProf" layoutX="426.0" layoutY="171.0" prefHeight="31.0" prefWidth="402.0" />
+                  <TextField fx:id="numberTxtProf" layoutX="53.0" layoutY="300.0" prefHeight="31.0" prefWidth="489.0" />
+                  <Label layoutX="61.0" layoutY="143.0" text="Name:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="143.0" text="Surname:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="216.0" text="Email Address:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="280.0" text="Contact Number:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="341.0" text="Password:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="398.0" text="Confirm Password:">
+                     <font>
+                        <Font name="Tahoma" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnUpdateProf" layoutX="58.0" layoutY="486.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="157.0" styleClass="btn-books" stylesheets="@styles.css" text="Update Profile" />
+                  <PasswordField fx:id="passwordProf" layoutX="56.0" layoutY="361.0" prefHeight="34.0" prefWidth="484.0" />
+                  <PasswordField fx:id="confirmPasswordProf" layoutX="56.0" layoutY="418.0" prefHeight="26.0" prefWidth="484.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

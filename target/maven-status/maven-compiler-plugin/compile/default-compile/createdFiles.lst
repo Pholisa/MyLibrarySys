@@ -1,0 +1,16 @@
+com\mycompany\mylibrarysys\model\BorrowedBooks.class
+com\mycompany\mylibrarysys\MemDashboardController.class
+com\mycompany\mylibrarysys\model\User.class
+com\mycompany\mylibrarysys\model\Utility$2.class
+com\mycompany\mylibrarysys\model\Utility$3.class
+com\mycompany\mylibrarysys\AdminDashboardController.class
+com\mycompany\mylibrarysys\data\DBConnection.class
+com\mycompany\mylibrarysys\model\Utility$1.class
+com\mycompany\mylibrarysys\App.class
+module-info.class
+com\mycompany\mylibrarysys\LibDashboardController.class
+com\mycompany\mylibrarysys\UserAccessController.class
+com\mycompany\mylibrarysys\model\UserSession.class
+com\mycompany\mylibrarysys\model\Utility.class
+com\mycompany\mylibrarysys\model\Book.class
+com\mycompany\mylibrarysys\data\AppQuery.class

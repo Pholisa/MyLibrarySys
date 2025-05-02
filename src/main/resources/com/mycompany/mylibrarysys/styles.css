@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 6, 2025, 10:43:18 AM
+    Author     : Reverside
+
+    -fx-background-color: linear-gradient(to bottom right, #cc6718, #9e4f0b);
+
+*/
+
+
+/* LOGIN AND REGISTER */
+.white-form{
+    -fx-background-color: #fff;
+}
+
+.beige-form{
+     -fx-background-color: #f8efd6;    
+}
+
+.other-form{
+    -fx-background-color: linear-gradient(to bottom right, #432807, #402507);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.border-form{
+    -fx-border-color: #432807;
+}
+
+.create-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #d7c48c;
+    -fx-border-width: 1px;
+    -fx-text-fill: #d7c48c;
+
+}
+
+.create-btn:hover{
+    -fx-background-color: #f8efd6;
+    -fx-text-fill: #000;
+
+}
+
+.create-btn-two{
+    -fx-background-color: #432807;
+    -fx-border-color:  #f8efd6;
+    -fx-border-width: 1px;
+    -fx-text-fill:  #f8efd6;
+
+}
+
+.create-btn-two:hover{
+    -fx-background-color: #f8efd6;
+    -fx-text-fill: #000;
+    -fx-border-color: #432807;
+}
+
+/* BOOKS FORM */
+.books-beige-form{
+    -fx-background-color: #f8efd6;
+    -fx-background-radius: 8px;
+}
+
+.books-border{
+    -fx-border-color: linear-gradient(to bottom right, #432807, #402507);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.btn-books{
+    -fx-background-color:linear-gradient(to bottom right, #432807, #402507);
+    -fx-text-fill: #f8efd6;
+    -fx-font-size: 14px;
+    -fx-border-color:  #f8efd6;
+    -fx-cursor: hand;
+    
+}
+
+.btn-books:hover{
+    -fx-background-color: #f8efd6;
+    -fx-text-fill: #432807;
+    -fx-border-color: #432807;
+}
+
+.books-table-view{
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #432807, #402507);
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px
+         
+}
+
+.books-table-view .column-header{
+    -fx-alignment: CENTER;
+}
+
+.books-table-view .column-header-background{
+    -fx-background-color:linear-gradient(to bottom right, #432807, #402507);
+    -fx-background-radius: 8px 8px 0px 0px;
+    -fx-background-insert: 0px 0px 0px 0px;
+}
+
+.books-table-view .column-header, .filler{
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+}
+
+.books-table-view .column-header .label{
+    -fx-text-fill:  #f8efd6;
+    -fx-font-family: arial;
+}
